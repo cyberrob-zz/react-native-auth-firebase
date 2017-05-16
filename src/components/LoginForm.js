@@ -15,6 +15,9 @@ class LoginForm extends Component {
               label='Email'
               placeholder='hello@auth.com'
               autoCorrect={false}
+              type='email-address'
+              returnKeyType='next'
+              secureTextEntry={false}
               value={this.state.email}
               onChangeText={email => {
                 this.setState({ email });
@@ -22,7 +25,20 @@ class LoginForm extends Component {
             />
           </CardSection>
 
-          <CardSection />
+          <CardSection>
+            <Input
+              label='Password'
+              placeholder='password'
+              autoCorrect={false}
+              type='default'
+              returnKeyType='go'
+              secureTextEntry
+              value={this.state.password}
+              onChangeText={password => {
+                this.setState({ password });
+              }}
+            />
+          </CardSection>
 
           <CardSection>
             <Button>
